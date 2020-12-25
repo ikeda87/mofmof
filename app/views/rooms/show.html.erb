@@ -1,0 +1,55 @@
+<h1>閲覧一覧</h1>
+
+<div class="room_basic_information">
+
+<p>
+  <strong>物件名:</strong>
+  <%= @room.name %>
+</p>
+
+<p>
+  <strong>賃料:</strong>
+  <%= @room.rent %>
+</p>
+
+<p>
+  <strong>住所:</strong>
+  <%= @room.adress %>
+</p>
+
+<p>
+  <strong>築年数:</strong>
+  <%= @room.age %>
+</p>
+
+<p>
+  <strong>備考:</strong>
+  <%= @room.note %>
+</p>
+</div>
+
+<div class="line"></div>
+
+<% n = 0 %>
+<% @room.stations.each do |r| %>
+<h4 class="station_infomation_title" id="title1">最寄り駅<%= n+= 1 %></h4>
+<div class="near_station_infomation">
+  <p>
+    <strong>路線名:</strong>
+    <%= r.route_name %>
+  </p>
+
+  <p>
+    <strong>駅名:</strong>
+    <%= r.station_name %>
+  </p>
+
+  <p>
+    <strong>徒歩所要時間:</strong>
+    <%= r.minutes %>
+  </p>
+</div>
+<% end %>
+
+<%= link_to '編集', edit_room_path(@room) %> |
+<%= link_to '戻る', rooms_path %>

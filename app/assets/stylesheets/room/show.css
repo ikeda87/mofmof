@@ -1,0 +1,18 @@
+.room_basic_information {
+  margin-top: 50px;
+  margin-left: 50px;
+  padding-bottom: 20px;
+}
+
+.station_infomation_title {
+  margin-left: 20px;
+}
+.line {
+  border: 1px solid;
+}
+#title1 {
+  padding-top: 20px;
+}
+.near_station_infomation {
+  margin-left: 50px;
+}
