@@ -17,7 +17,7 @@
 
   <div class="field">
     <%= room.label :rent, "賃料:" %>
-    <%= room.number_field :rent %>
+    <%= room.text_field :rent %>
   </div>
 
   <div class="field">
@@ -27,7 +27,7 @@
 
   <div class="field">
     <%= room.label :age, "築年数:" %>
-    <%= room.number_field :age %>
+    <%= room.text_field :age %>
   </div>
 
   <div class="field" id="note">
@@ -38,7 +38,7 @@
   <% n = 0 %>
   <%= room.fields_for :stations do |station| %>
     <div class="field">
-      <h4 >最寄り駅<%= n+= 1 %></h4>
+      <h3>最寄り駅<%= n+= 1 %></h3>
         <%= station.label :route_name, "路線名:" %>
         <%= station.text_field :route_name %>
         <%= station.label :station_name, "駅名:" %>

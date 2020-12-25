@@ -35,7 +35,7 @@ class RoomsTest < ApplicationSystemTestCase
     fill_in "Rent", with: @room.rent
     click_on "Update Room"
 
-    assert_text "Room was successfully updated"
+    assert_text "アップデートされました"
     click_on "Back"
   end
 
@@ -45,6 +45,6 @@ class RoomsTest < ApplicationSystemTestCase
       click_on "Destroy", match: :first
     end
 
-    assert_text "Room was successfully destroyed"
+    assert_text "削除されました"
   end
 end
